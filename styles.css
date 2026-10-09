@@ -1,5 +1,4 @@
-
-    * {
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -268,4 +267,81 @@
 
 .linkMapa:hover {
     color: #E5541F;
+}
+
+#listaCarros {
+    max-width: 1100px;
+    margin: 0 auto 30px auto;
+    padding: 0 40px;
+}
+
+.boxFiltro {
+    max-width: 700px;
+    margin: -20px auto 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.campoBusca {
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 50px;
+    padding: 0 24px;
+    font-size: 15px;
+    color: #2A2620;
+    background: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    outline: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.campoBusca:focus {
+    box-shadow: 0 4px 14px rgba(255,107,53,0.35);
+}
+
+.botoesFiltro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.botaoFiltro {
+    width: auto;
+    height: 36px;
+    margin: 0;
+    padding: 0 22px;
+    background: #FFFFFF;
+    color: #4A463C;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.botaoFiltro:hover {
+    background: #FFE3D9;
+}
+
+.botaoFiltro.ativo {
+    background: #FF6B35;
+    color: #FFFFFF;
+}
+
+.escondido {
+    display: none;
+}
+
+.semResultado {
+    display: none;
+    text-align: center;
+    color: #8A8577;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.semResultado.mostrar {
+    display: block;
 }

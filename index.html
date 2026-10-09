@@ -26,8 +26,19 @@
     </div>
     <section id = "carros">
     <h1 class = "titulo2">Nossos principais Carros</h1>
-    <div class = "box2">
-        <div class = "box1">
+    <div class = "boxFiltro">
+        <input class = "campoBusca" id = "campoBusca" type = "text" placeholder = "Buscar carro pelo nome">
+        <div class = "botoesFiltro">
+            <button class = "botaoFiltro ativo" data-filtro = "todos">Todos</button>
+            <button class = "botaoFiltro" data-filtro = "hatch">Hatch</button>
+            <button class = "botaoFiltro" data-filtro = "suv">SUV</button>
+            <button class = "botaoFiltro" data-filtro = "esportivo">Esportivos</button>
+            <button class = "botaoFiltro" data-filtro = "outros">Outros</button>
+        </div>
+    </div>
+    <p class = "semResultado" id = "semResultado">Nenhum carro encontrado</p>
+    <div class = "box2" id = "listaCarros">
+        <div class = "box1" data-categoria = "hatch">
             <img class = "imagemCarro" src = "https://www.estadao.com.br/resizer/v2/DWOS2AJL2ZN3XAN6C5IBLTFZC4.jpg?quality=80&auth=71b2cc940a4f88aa4c64514d057aa885dd175f1a074929bfad3b3b54b9009d8b&width=380">
             <h1 class = "sas">PALIO</h1>
             <p1 class ="paragrafoCarro" >O Palio é um ótimo carro para o seu dia a dia</p1>
@@ -35,7 +46,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "hatch">
             <img  class = "imagemCarro" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYQTUJbSzTw9Eb9-ay9dM5lnjep5Rfx9GcKALFyTzJ_x3V2MR_hU0cFIOZ&s=10">
             <h1 class = "sas" >GOL</h1>
             <p1 class ="paragrafoCarro">O Gol é um carro compacto e econômico</p1>
@@ -43,7 +54,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "hatch">
             <img class = "imagemCarro" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS98CR94IiUAB6nXWMZoiOS4J7iV1WN7NcVWxRFPJgXwA&s">
             <h1 class = "sas" >UNO </h1>
             <p1 class ="paragrafoCarro" >O Uno é ideal para quem busca praticidade</p1>
@@ -51,9 +62,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-    </div>
-        <div class = "box2">
-        <div class = "box1">
+        <div class = "box1" data-categoria = "esportivo">
             <img class = "imagemCarro" src = "https://forbes.com.br/wp-content/uploads/2020/08/Neg%C3%B3cios-CarrosdeLuxo-180820-Divulga%C3%A7%C3%A3o9-1.jpg">
             <h1 class = "sas">765LT</h1>
             <p1 class ="paragrafoCarro" >Um superesportivo para quem busca performance</p1>
@@ -61,7 +70,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "suv">
             <img  class = "imagemCarro" src = "https://www.moneytimes.com.br/uploads/2022/01/fiat-pulse-67.jpg">
             <h1 class = "sas" >PULSE</h1>
             <p1 class ="paragrafoCarro">Um SUV compacto com ótimo custo-benefício</p1>
@@ -69,7 +78,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "hatch">
             <img class = "imagemCarro" src = "https://i0.statig.com.br/bancodeimagens/7k/4y/12/7k4y12j7k7od5kb9jlz83rvkd.jpg">
             <h1 class = "sas" >KWID </h1>
             <p1 class ="paragrafoCarro" >Um carro compacto, leve e econômico e sas sas</p1>
@@ -77,9 +86,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-    </div>
-        <div class = "box2">
-        <div class = "box1">
+        <div class = "box1" data-categoria = "hatch">
             <img class = "imagemCarro" src = "https://media.gazetadopovo.com.br/2019/03/30161252/ford-ka-hatch-compacto-2-960x540.jpg">
             <h1 class = "sas">KA</h1>
             <p1 class ="paragrafoCarro" >Um hatch compacto e ágil para o dia a dia</p1>
@@ -87,7 +94,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "hatch">
             <img  class = "imagemCarro" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJTyZNqYLVKzbu62RsoINZQYlUZA7v6WmU7-RpMTgSIQ&s=10">
             <h1 class = "sas" >HB20</h1>
             <p1 class ="paragrafoCarro">Um dos hatches mais vendidos do Brasil</p1>
@@ -95,7 +102,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "hatch">
             <img class = "imagemCarro" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVWKIsd_EO54lerl_9UaBE6vqsYeOgztp-iA36xeFPj63Z7MaC0z3ubqI&s=10">
             <h1 class = "sas" >POLO</h1>
             <p1 class ="paragrafoCarro" >Um hatch robusto com bom acabamento</p1>
@@ -103,9 +110,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-    </div>
-        <div class = "box2">
-        <div class = "box1">
+        <div class = "box1" data-categoria = "hatch">
             <img class = "imagemCarro" src = "https://99app.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2Fx9sul3ikm35w%2F3DFGM0izlEp6kpnCs94RVe%2F9ec2e253632758255a529040ee8f5511%2F99asset_BLOG1_016784&w=2048&q=75">
             <h1 class = "sas">UNO  </h1>
             <p1 class ="paragrafoCarro" >Outra unidade do Uno disponível em estoque</p1>
@@ -113,7 +118,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "suv">
             <img  class = "imagemCarro" src = "https://www.cnvw.com.br/_next/image?url=https%3A%2F%2Fcnvw-assets.nyc3.digitaloceanspaces.com%2Fpublic%2Fblog%2FaNKeMVSXPyFJHN2d7dJ3xDeFoZJVzX-metaQ29uZmlyYSBvcyA1IGNhcnJvcyBWVyBtYWlzIHBvcHVsYXJlcyBkbyBtZXJjYWRvLmpwZw%253D%253D-.jpg&w=3840&q=75">
             <h1 class = "sas" >T-CROSS</h1>
             <p1 class ="paragrafoCarro">Um SUV espaçoso com ótimo desempenho e sas</p1>
@@ -121,7 +126,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "hatch">
             <img class = "imagemCarro" src = "https://cdn.autopapo.com.br/box/uploads/2025/01/23140513/chevrolet_onix_laranja-frente-parado-732x488.jpg">
             <h1 class = "sas" >ONIX</h1>
             <p1 class ="paragrafoCarro" >O carro mais vendido do Brasil, com ótimo espaço interno</p1>
@@ -129,9 +134,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-    </div>
-        <div class = "box2">
-        <div class = "box1">
+        <div class = "box1" data-categoria = "outros">
             <img class = "imagemCarro" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_w11i6CheQssbF7ayn0bA_PzAaMadeHlqlKhaly7FswElc2LMijE4nrtv&s=10">
             <h1 class = "sas">OPALA</h1>
             <p1 class ="paragrafoCarro" >Um clássico brasileiro para colecionadores</p1>
@@ -139,7 +142,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "hatch">
             <img  class = "imagemCarro" src = "https://img.odcdn.com.br/wp-content/uploads/2024/05/09.march_-1024x603.jpg">
             <h1 class = "sas" >MARCH</h1>
             <p1 class ="paragrafoCarro">Um hatch confortável </p1>
@@ -147,7 +150,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "outros">
             <img class = "imagemCarro" src = "https://wieck-nissanao-production.s3.amazonaws.com/photos/6151f83a976b5dafcb5f7a4376b8067d4720aa94/preview-928x522.jpg">
             <h1 class = "sas" >LIVINA </h1>
             <p1 class ="paragrafoCarro" >Uma minivan espaçosa para toda a família</p1>
@@ -155,9 +158,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-    </div>
-        <div class = "box2">
-        <div class = "box1">
+        <div class = "box1" data-categoria = "suv">
             <img class = "imagemCarro" src = "https://carroscomcamanzi.com.br/wp-content/uploads/2022/09/Kicks-2023.jpg">
             <h1 class = "sas">KICKS</h1>
             <p1 class ="paragrafoCarro" >Um SUV compacto e moderno</p1>
@@ -165,7 +166,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "outros">
             <img  class = "imagemCarro" src = "https://img.odcdn.com.br/wp-content/uploads/2024/05/08.versa_-1024x581.jpg">
             <h1 class = "sas" >VERSA</h1>
             <p1 class ="paragrafoCarro">Um sedã espaçoso e econômico</p1>
@@ -173,7 +174,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "hatch">
             <img class = "imagemCarro" src = "https://cdn.autopapo.com.br/box/uploads/2021/04/21120734/recall-chevrolet-celta-marrom-em-movimento.jpg">
             <h1 class = "sas" >CELTA</h1>
             <p1 class ="paragrafoCarro" >Um compacto simples e de fácil manutenção</p1>
@@ -181,9 +182,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-    </div>
-        <div class = "box2">
-        <div class = "box1">
+        <div class = "box1" data-categoria = "esportivo">
             <img class = "imagemCarro" src = "https://upload.wikimedia.org/wikipedia/commons/c/c9/Bugatti_Veyron_16.4_%E2%80%93_Frontansicht_%281%29%2C_5._April_2012%2C_D%C3%BCsseldorf.jpg">
             <h1 class = "sas">VEYRON</h1>
             <p1 class ="paragrafoCarro" >Um hipercarro para quem busca o topo de linha</p1>
@@ -191,7 +190,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "esportivo">
             <img  class = "imagemCarro" src = "https://s2-g1.glbimg.com/Q6NowNrOWKuxflltwbYHf2xpocA=/0x0:2774x2292/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/o/K/bBLv8dQ0Ov63jU1rGAMw/chiron-br-1.jpg">
             <h1 class = "sas" >CHIRON</h1>
             <p1 class ="paragrafoCarro">O sucessor do Veyron, ainda mais potente e sas</p1>
@@ -199,7 +198,7 @@
                 <button>COMPRAR</button>
             </a>
         </div>
-        <div class = "box1">
+        <div class = "box1" data-categoria = "esportivo">
             <img class = "imagemCarro" src = "https://cdn.motor1.com/images/mgl/YA3zrl/s3/bugatti-bolide-track-testing.jpg">
             <h1 class = "sas" >BOLIDE</h1>
             <p1 class ="paragrafoCarro" >Um carro de pista extremo, feito para performance pura</p1>
@@ -268,5 +267,6 @@
             <a class = "linkMapa" href="https://www.google.com/maps?q=Rua+Nicollo+Maquiavel,+168" target="_blank">Ver no Google Maps</a>
         </div>
     </section>
+    <script src = "script.js"></script>
 </body>
 </html>
